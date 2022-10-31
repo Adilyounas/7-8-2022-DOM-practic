@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Cardo:ital@1&family=Cinzel:wght@500&family=Cormorant+SC:wght@500&family=Dancing+Script:wght@600&family=Emilys+Candy&family=Fasthand&family=Fredoka+One&family=Georama:wght@300&family=Joan&family=Kdam+Thmor+Pro&family=Mina&family=Montserrat:wght@300&family=Nunito:wght@300&family=Nuosu+SIL&family=Odibee+Sans&family=Orbitron:wght@900&family=Oswald&family=Playfair+Display&family=Poppins:ital,wght@1,200&family=Reggae+One&family=Roboto&family=Rowdies&family=Rubik+Glitch&family=Ubuntu:wght@300&display=swap');
+
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    background-image: url(dark-blue-product-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#open_btn{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 350px;
+    height: 80px;
+    font-size: 2rem;
+    border: 2px solid rgb(124, 123, 123);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 3px black;
+    transition: .5s;
+    color:rgb(255, 255, 255);
+}
+
+#modal{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    align-items: center;
+    animation: modal .6s;    
+}
+
+#open_btn:hover{
+    color: black;
+    background-color: white;
+    transition: 1s;
+}
+
+
+#close_btn{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#close_btn:hover{
+    color: red;
+    transition: .5s;
+}
+
+
+#modal_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+
+@keyframes modal{
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+    }
+}

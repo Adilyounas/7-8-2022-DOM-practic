@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Cardo:ital@1&family=Cinzel:wght@500&family=Cormorant+SC:wght@500&family=Dancing+Script:wght@600&family=Emilys+Candy&family=Fasthand&family=Fredoka+One&family=Georama:wght@300&family=Joan&family=Kdam+Thmor+Pro&family=Mina&family=Montserrat:wght@300&family=Nunito:wght@300&family=Nuosu+SIL&family=Odibee+Sans&family=Orbitron:wght@900&family=Oswald&family=Playfair+Display&family=Poppins:ital,wght@1,200&family=Reggae+One&family=Roboto&family=Rowdies&family=Rubik+Glitch&family=Ubuntu:wght@300&display=swap');
+
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(dark-blue-product-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.accrodion{
+    width: 65%;
+    background-color: #fff;
+    padding: 30px ;
+    border-radius: 30px;
+}
+
+
+.accrodion .accordio_title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.accrodion .content_container .question{
+    padding: 18px 0;
+    font-size: 22px;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    position: relative;
+
+}
+
+.accrodion .content_container .question::after{
+    content: "+";
+    font-size: 22px;
+    line-height: 1.5;
+    right: 2%;
+    position: absolute;
+}
+
+.accrodion .content_container .answer{
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 1.5;
+    height: 0px;
+    overflow: hidden;
+    width: 100%;
+    transition: .6s;
+}
+
+.accrodion .content_container.active .answer{
+    height: 150px;
+}
+
+.accrodion .content_container.active .question{
+    font-size: 18px;
+    transition: .5s;
+}
+
+.accrodion .content_container.active .question::after{
+    content: "-";
+    font-size: 30px;
+}
+
